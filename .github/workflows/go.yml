@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: test Scret
-      run: eco YOUR_SCRET_TEST_CI # nunca fazer isso em projeto real
+      run: eco ${{ secrets.YOUR_SCRET_TEST_CI }} # nunca fazer isso em projeto real
     
     - name: Set up Go
       uses: actions/setup-go@v3
