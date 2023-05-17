@@ -13,11 +13,6 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    
-    strategy: 
-      matrix:
-        go_version: ['1.19', '1.18', '>=1.19'] # Esse último é para passar alguma versão mais nova que 1.19
-    
     steps:
     - uses: actions/checkout@v3
     
@@ -27,7 +22,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v3
       with:
-        go-version: ${{ matrix.go_version }}
+        go-version: 1.19
         
     - name: Build-DB
       run: docker-compose build
