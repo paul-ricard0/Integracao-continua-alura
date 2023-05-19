@@ -5,10 +5,7 @@ name: Go
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+      branches: [ '*' ]   # Para qualquer brach que mandar 
 jobs:
 
   test:
