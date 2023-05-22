@@ -10,10 +10,16 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    
+    env: 
+      HOST: localhost
+      PORT: 5432
+      USER: root
+      PASSWORD: root
+      DBNAME: root
+  
     strategy: 
       matrix:
-        go_version: ['1.19', '1.18', '>=1.19'] # Esse último é para passar alguma versão mais nova que 1.19
+        go_version: ['1.19', '>=1.19'] # Esse último é para passar alguma versão mais nova que 1.19
     
     steps:
     - uses: actions/checkout@v3
