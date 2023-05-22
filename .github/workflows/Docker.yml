@@ -19,7 +19,7 @@ jobs:
         # Endereço do servidor do registro do Docker. Se não for definido, o padrão será o Docker Hub
        # registry: 
         # Nome de usuário usado para fazer logon no registro do Docker
-        username: ${{ secrets.USER_DOCKER_HUB }}
+        username: ${{ secrets.USER_DOCKER_HUB}}
         # Senha ou token de acesso pessoal usado para fazer logon no registro do Docker
         password: ${{ secrets.PASS_DOCKER_HUB }}
         # Especifica se o registro fornecido é ECR (automático, verdadeiro ou falso), default is auto
