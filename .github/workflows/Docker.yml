@@ -4,7 +4,7 @@ on:
   workflow_call: 
 
 jobs:
-  dokcer:
+  docker:
     runs-on:  ubuntu-lastest
     
     steps:
