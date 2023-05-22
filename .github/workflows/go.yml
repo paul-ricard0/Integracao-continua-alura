@@ -5,7 +5,10 @@ name: Go
 
 on:
   push:
-      branches: [ '*' ]   # Para qualquer brach que mandar 
+    branches: [ '*' ]   # Para qualquer brach que mandar
+  pull_request: 
+    branches: [ '*' ] 
+ 
 jobs:
 
   test:
@@ -23,10 +26,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-    
-    - name: test Scret
-      run: echo ${{ secrets.YOUR_SCRET_TEST_CI }} # nunca fazer isso em projeto real
-    
+
     - name: Set up Go
       uses: actions/setup-go@v3
       with:

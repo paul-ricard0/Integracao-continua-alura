@@ -1,0 +1,29 @@
+name: Docker
+
+on: 
+  workflow_call: 
+
+jobs:
+  dokcer:
+    runs-on:  ubuntu-lastest
+    
+    steps:
+    - uses: actions/checkout@v3 
+
+    - name: Setup Docker Build
+      uses: docker/setup-buildx-action@v2.0.0
+
+      - name: Docker Login
+    
+      with:
+        # Endereço do servidor do registro do Docker. Se não for definido, o padrão será o Docker Hub
+        registry: 
+        # Nome de usuário usado para fazer logon no registro do Docker
+        username: ${{ secrets.USER_DOCKER_HUB }}
+        # Senha ou token de acesso pessoal usado para fazer logon no registro do Docker
+        password: ${{ secrets.PASS_DOCKER_HUB }}
+        # Especifica se o registro fornecido é ECR (automático, verdadeiro ou falso), default is auto
+        ecr: 
+        # Saia do registro do Docker ao final de um trabalho, default is true
+        logout: 
+
